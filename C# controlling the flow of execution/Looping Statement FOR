@@ -29,6 +29,7 @@ namespace GreatBook
             result.Average=0.0;
             result.highgrade = double.MinValue;
             result.lowgrade = double.MaxValue;
+            //Looping is done here using FOR Statement 
             for(var index=0;index<grades.Count;index+=1)
             {
                 result.lowgrade = Math.Min(grades[index], result.lowgrade);
