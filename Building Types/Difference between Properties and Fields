@@ -1,0 +1,27 @@
+//
+1.Object orientated programming principles say that the internal workings of a class should be hidden from the outside world. If you expose a field you're in essence exposing the internal implementation of the class. So we wrap the field using the property to hide the internal  working of the class.
+
+We can see that in the above code section we define property as public and filed as private, so user can only access the property but internally we are using the field, such that provides a level of abstraction  and hides the field from user access.
+2.Another  important difference is that interfaces can have properties but not fields.
+3.Using property we can throw an event but this is not possible in field.
+
+public class Person  
+{  
+    private int Id; //Field  
+    public int User_ID  
+  { //Property  
+        get   
+        {  
+            return Id;  
+        }  
+        set   
+        {  
+            valueChanged();  
+            Id = value;  
+        }  
+    }  
+    public void valueChanged()   
+    {  
+        //Write Code  
+    }  
+} 
