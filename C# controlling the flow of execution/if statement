@@ -1,6 +1,6 @@
 
  public void AddGrade(double grade){
-             
+             // We are checking whether the condition is getting satisfied by using if statement and if condition is not getting satisfied an exception is thrown by using else.
             if (grade<=100 || grade>=0)
             {
             
