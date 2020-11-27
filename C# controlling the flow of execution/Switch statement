@@ -1,0 +1,65 @@
+using System;
+using System.Collections.Generic;
+namespace GreatBook
+{
+    public class Book{
+        public Book(string name){
+            grades=new List<double>();
+            Name=name;
+        }
+  //Here we are using switch statement 
+        public void AddLetterGrade(char letter){
+           switch(letter)
+           {
+               case 'A':
+                   AddGrade(90);
+                   break;
+               case 'B':
+                   AddGrade(80);
+                   break;
+               case 'C':
+                  AddGrade(70);
+               default:
+                  AddGrade(0);
+                  break;
+
+
+           }
+        }
+
+         public void AddGrade(double grade){
+             
+            if (grade<=100 || grade>=0)
+            {
+            
+              grades.Add(item: grade);  
+                }
+                else
+                {
+                    throw new ArgumentException($"Invalid{nameof(grade)}");
+                }
+            }
+            
+        }
+        
+
+        public Statistics GetStatistics()
+        {
+            var result = new Statistics();
+            result.Average=0.0;
+            result.highgrade = double.MinValue;
+            result.lowgrade = double.MaxValue;
+            for(var index=0;index<grades.Count;index+=1)
+            {
+                result.lowgrade = Math.Min(grades[index], result.lowgrade);
+                result.highgrade = Math.Max(grades[index],result. highgrade);
+                result.Average+= grades[index];
+            }
+           result.Average /= grades.Count;
+           return result;
+
+        }
+        private List<double> grades;
+        public string Name;
+    }
+}
