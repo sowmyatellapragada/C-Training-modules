@@ -1,0 +1,24 @@
+class Vehicle  // base class (parent) 
+{
+  public string brand = "Ford";  
+  public void honk()             
+  {                    
+    Console.WriteLine("switch on !");
+  }
+}
+
+class Car : Vehicle  // derived class (child)
+{
+  public string modelName = "Mustang"; 
+}
+
+class Program
+{
+  static void Main(string[] args)
+  {
+    
+    Car myCar = new Car();
+    myCar.honk();
+    Console.WriteLine(myCar.brand + " " + myCar.modelName);
+  }
+}
