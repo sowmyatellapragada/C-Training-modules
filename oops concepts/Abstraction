@@ -1,0 +1,26 @@
+abstract class Animal
+{
+
+  public abstract void animalSound();
+  public void sleep()
+  {
+    Console.WriteLine("sleep");
+  }
+}
+class dog : Animal
+{
+  public override void animalSound()
+  {
+    Console.WriteLine("The dog says: bow bow");
+  }
+}
+
+class Program
+{
+  static void Main(string[] args)
+  {
+    Dog myDog = new dog(); 
+    myDog.animalSound();  
+    myDog.sleep();  
+  }
+}
