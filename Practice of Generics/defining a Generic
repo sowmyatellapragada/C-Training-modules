@@ -1,0 +1,28 @@
+namespace GenericsDemo
+{
+    public class imp
+    {
+        private static void Main()
+        {
+            //bool IsEqual = Calculator.AreEqual<int>(100, 200);
+            //bool IsEqual = Calculator.AreEqual<string>("ABC", "ABC");
+            bool IsEqual =Calculator.AreEqual<double>(10.5, 20.5);
+            if (IsEqual)
+            {
+                Console.WriteLine("Both are Equal");
+            }
+            else
+            {
+                Console.WriteLine("Both are Not Equal");
+            }
+            Console.ReadKey();
+        }
+    }
+    public class Calculator
+    {
+        public static bool AreEqual<T>(T value1, T value2)
+        {
+            return value1.Equals(value2);
+        }
+    }
+}
