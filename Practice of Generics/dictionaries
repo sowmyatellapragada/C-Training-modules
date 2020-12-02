@@ -1,0 +1,35 @@
+using System; 
+using System.Collections.Generic;   
+  
+class sowmya { 
+  
+    static public void Main() { 
+          
+        // Creating a dictionary 
+        // using Dictionary<TKey,TValue> class 
+        Dictionary<int, string> so =   
+                     new Dictionary<int, string>();  
+          so.Add(111, "Welcome"); 
+          so.Add(112, "to"); 
+          so.Add(113, "sowmya's page");
+          foreach(KeyValuePair<int, string> ele in so) 
+          { 
+              Console.WriteLine("{0} and {1}",  
+                          ele.Key, ele.Value); 
+          } 
+          Console.WriteLine(); 
+            
+          // Using Remove() method  
+          so.Remove(1123); 
+            
+          // After Remove() method 
+          foreach(KeyValuePair<int, string> ele in so) 
+          { 
+              Console.WriteLine("{0} and {1}", 
+                          ele.Key, ele.Value); 
+          } 
+          Console.WriteLine(); 
+            
+            
+          
+} 
