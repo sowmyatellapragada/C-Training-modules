@@ -6,7 +6,6 @@ class sowmya {
     static public void Main() { 
           
         // Creating a dictionary 
-        // using Dictionary<TKey,TValue> class 
         Dictionary<int, string> so =   
                      new Dictionary<int, string>();  
           so.Add(111, "Welcome"); 
