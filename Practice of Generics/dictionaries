@@ -20,7 +20,7 @@ class sowmya {
           Console.WriteLine(); 
             
           // Using Remove() method  
-          so.Remove(1123); 
+          so.Remove(111); 
             
           // After Remove() method 
           foreach(KeyValuePair<int, string> ele in so) 
