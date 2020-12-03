@@ -1,3 +1,2 @@
 # C#-Training-modules
-Created a CALCULATOR PROGRAM USING C# FUNDAMENTALS FOR NOW and
-Created a Basic Hotel management Console Application which retrieves us the information like room number,checkin date,checkout date,duration of stay. 
+Created a CALCULATOR PROGRAM USING C# FUNDAMENTALS FOR NOW 
