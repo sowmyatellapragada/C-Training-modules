@@ -46,16 +46,16 @@ namespace Calculator {
         }  
         
         public static int Subtraction(int input1, int input2) {  
-            int result = input1 + input2;  
+            int result = input1-input2;  
             return result;  
         } 
         public static int Multiplication(int input1, int input2) {  
-            int result = input1 + input2;  
+            int result = input1 * input2;  
             return result;  
         }  
         
         public static int Division(int input1, int input2) {  
-            int result = input1 + input2;  
+            int result = input1 / input2;  
             return result;  
         }  
     }  
