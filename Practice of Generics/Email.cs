@@ -1,0 +1,42 @@
+using System; 
+using System.Collections.Generic; 
+using System.Linq; 
+  
+class email { 
+      
+    public string username
+    { 
+        get; 
+        set; 
+    } 
+      
+    public string emailid
+    { 
+        get; 
+        set; 
+    } 
+} 
+  
+class emaildetails { 
+      
+   
+    static void Main(string[] args) 
+    { 
+        
+        List<email> details = new List<email>() { 
+            new email{ username = "sowmya", emailid = "sowmya@gmail.com" }, 
+            new email{ username = "sriram", emailid = "sriram@gmail.com" }, 
+            new email{ username = "pranav", emailid = "pranav@gmail.com" }, 
+            new email{ username = "dhanvee", emailid = "dhanvee@gmail.com" }, 
+            new email{ username = "chandini", emailid = "chandini@gmail.com" }, 
+        }; 
+  
+        
+        var newDetails = details.OrderBy(x => x.emailid); 
+  
+        foreach(var value in newDetails) 
+        { 
+            Console.WriteLine(value.username + " " + value.emailid); 
+        } 
+    } 
+} 
