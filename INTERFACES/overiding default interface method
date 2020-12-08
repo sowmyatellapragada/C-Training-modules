@@ -1,0 +1,51 @@
+using System; 
+interface I_interface { 
+  
+    
+    void display_1(); 
+  
+    public void display_2() 
+    { 
+        Console.WriteLine("Hello!!  Default Method of I_interface"); 
+    } 
+} 
+  
+
+interface A_interface : I_interface { 
+  
+   
+    void I_interface.display_2() 
+    { 
+        Console.WriteLine("Hello!! Overriden default method"); 
+    } 
+} 
+  
+
+class Example_Class : I_interface, A_interface { 
+  
+   
+    public void display_1() 
+    { 
+        Console.WriteLine("Hello!! Method of I_interface"); 
+    } 
+  
+    
+    public static void Main(String[] args) 
+    { 
+  
+        
+        Example_Class t = new Example_Class(); 
+  
+        
+        t.display_1(); 
+  
+        I_interface obj1 = t; 
+  
+     
+        obj1.display_2(); 
+  
+        
+        A_interface obj2 = t; 
+        obj2.display_2(); 
+    } 
+} 
